@@ -1,5 +1,5 @@
 # GmailSelector
-Select your email with shortcuts without using your mouse
+Open your email with shortcuts without using your mouse
 
 # Install
 * Install tampermonkey (Is used to inject js code)
