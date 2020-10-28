@@ -1,4 +1,4 @@
-# GmailSelector
+# Gmail Selector
 Open your email with shortcuts without using your mouse
 
 # Install
