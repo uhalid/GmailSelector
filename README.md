@@ -1,6 +1,11 @@
 # GmailSelector
 Select your email with shortcuts without using your mouse
 
+# Install
+* Install tampermonkey (Is used to inject js code)
+* Install the script for [here](https://greasyfork.org/en/scripts/414911-gmail-selector)
+* or you can just copy and paste the script above in tampermonkey
+
 # How to use:
 Press ALT + number to select an email.
 
