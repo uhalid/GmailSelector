@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gmail Selector
 // @namespace    https://github.com/uhalid/GmailSelector
-// @version      1.0
+// @version      2.0
 // @description  Select your email with shortcuts without using your mouse
 // @author       Uhalid
 // @match       *://mail.google.com/*
@@ -67,9 +67,20 @@
         e = e || event;
         map[e.keyCode] = e.type == 'keydown';
 
-        if (map[18] && map[BackKeyCode]) {
+        if (map[18] && map[BackKeyCode]) { //  back to inbox ALT + key on the left of the 1
             back();
             map = {};
+        }
+        if (map[18] && map[87]) { // ALT + W
+            var evt = new KeyboardEvent('keydown', {'keyCode':38, 'which':38});
+            document.dispatchEvent(evt);
+        }
+        if(map[18] && map[83]) { // ALT + S
+            var evt2 = new KeyboardEvent('keydown', {'keyCode':40, 'which':40});
+            document.dispatchEvent(evt2);
+        }
+        if(map[18] && map[65]) { // ALT + A
+            document.getElementsByClassName("btb")[0].click();
         }
         if (map[18] && map[49]) { // ALT + 1
             map = {};
