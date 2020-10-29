@@ -8,7 +8,7 @@ Open your email with shortcuts without using your mouse
 
 # How to use:
 Press ALT + number to select an email.
-
+Otherwise you can navigate between emails using ALT + W/S to go up and down, as using arrow keys, for open an email ALT + A
 If you want to go back to Inbox press the key to the left of the 1.
 
 # Example
