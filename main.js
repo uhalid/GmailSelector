@@ -11,20 +11,6 @@
 
 (function () {
     'use strict';
-    const keyCodes = {
-        18: 'alt',
-        48: '0',
-        49: '1',
-        50: '2',
-        51: '3',
-        52: '4',
-        53: '5',
-        54: '6',
-        55: '7',
-        56: '8',
-        57: '9',
-
-    }
     const datatooltipValues = {
         'it-IT': {
             "tr": "Seleziona",
@@ -39,13 +25,13 @@
         "it-IT": 220,
         "en-EN": 192
     }
+
     var map = {};
     var userLang = navigator.language || navigator.userLanguage;
     var TrdatatooltipValue = datatooltipValues[userLang].tr;
     var BackdatatooltipValue = datatooltipValues[userLang].back;
-    console.log(BackdatatooltipValue);
     var BackKeyCode = backKeyCodes[userLang];
-    console.log(BackKeyCode);
+
     function openEMail(num) {
         num -= 1;
         var tdElement = document.querySelectorAll(`[data-tooltip="${TrdatatooltipValue}"]`);
@@ -69,7 +55,7 @@
 
         if (map[18] && map[BackKeyCode]) { //  back to inbox ALT + key on the left of the 1
             back();
-            map = {};
+            map[BackKeyCode] = false;
         }
         if (map[18] && map[87]) { // ALT + W
             var evt = new KeyboardEvent('keydown', {'keyCode':38, 'which':38});
@@ -83,43 +69,43 @@
             document.getElementsByClassName("btb")[0].click();
         }
         if (map[18] && map[49]) { // ALT + 1
-            map = {};
+            map[49]= false;
             openEMail(1);
         }
         if (map[18] && map[50]) { // ALT + 2
-            map = {};
+            map[50] = false;
             openEMail(2);
         }
         if (map[18] && map[51]) { // ALT + 3
-            map = {};
+            map[51] = false;
             openEMail(3);
         }
         if (map[18] && map[52]) { // ALT + 4
-            map = {};
+            map[52] = false;
             openEMail(4);
         }
         if (map[18] && map[53]) { // ALT + 5
-            map = {};
+            map[53] = false;
             openEMail(5);
         }
         if (map[18] && map[54]) { // ALT + 6
-            map = {};
+            map[54] = false;
             openEMail(6);
         }
         if (map[18] && map[55]) { // ALT + 7
-            map = {};
+            map[55] = false;
             openEMail(7);
         }
         if (map[18] && map[56]) { // ALT + 8
-            map = {};
+            map[56] = false;
             openEMail(8);
         }
         if (map[18] && map[57]) {// ALT + 9
-            map = {};
+            map[57] = false;
             openEMail(9);
         }
         if (map[18] && map[48]) {// ALT + 10
-            map = {};
+            map[48] = false;
             openEMail(10);
         }
     }
